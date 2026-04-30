@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "stack-exchange-qa-scraper",
+  "title": "Stack Exchange Q&A Scraper",
+  "description": "Pull questions, answers, scores, view counts, owners, and tags from any Stack Exchange site (Stack Overflow, Server Fault, Super User, AskUbuntu, etc.). Filter by tag, sort, time range. Export clean JSON, CSV, or Excel for dev intel and content discovery.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json"
+}

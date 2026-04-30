@@ -1,0 +1,68 @@
+{
+  "title": "Stack Exchange Q&A Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Free users: Limited to 10 items (preview). Paid users: Optional, max 1,000,000.",
+      "editor": "number",
+      "prefill": 10,
+      "minimum": 1,
+      "maximum": 1000000
+    },
+    "site": {
+      "title": "Stack Exchange site",
+      "type": "string",
+      "description": "Which Stack Exchange site to query.",
+      "editor": "select",
+      "default": "stackoverflow",
+      "prefill": "stackoverflow",
+      "enum": ["stackoverflow", "serverfault", "superuser", "askubuntu", "math", "stats", "tex", "english", "softwareengineering", "codereview", "dba", "security", "unix", "apple", "android", "gaming", "scifi", "writers", "music", "graphicdesign", "ux", "webmasters", "wordpress", "magento", "salesforce", "drupal", "ai", "datascience", "ja.stackoverflow", "es.stackoverflow", "ru.stackoverflow", "pt.stackoverflow"],
+      "sectionCaption": "Search",
+      "sectionDescription": "Public api.stackexchange.com queries — anonymous quota of 300 req/day per IP."
+    },
+    "tag": {
+      "title": "Tag (optional)",
+      "type": "string",
+      "description": "Filter by tag, e.g. python, react, kubernetes.",
+      "editor": "textfield"
+    },
+    "searchQuery": {
+      "title": "Search query (optional)",
+      "type": "string",
+      "description": "Free-text search in titles + bodies.",
+      "editor": "textfield"
+    },
+    "sort": {
+      "title": "Sort",
+      "type": "string",
+      "description": "How to order results.",
+      "editor": "select",
+      "default": "activity",
+      "prefill": "activity",
+      "enum": ["activity", "votes", "creation", "hot", "week", "month"]
+    },
+    "fromDate": {
+      "title": "From date (optional)",
+      "type": "string",
+      "description": "Earliest creation date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "toDate": {
+      "title": "To date (optional)",
+      "type": "string",
+      "description": "Latest creation date (YYYY-MM-DD).",
+      "editor": "textfield"
+    },
+    "includeAnswers": {
+      "title": "Include answers",
+      "type": "boolean",
+      "description": "When enabled, fetch answers for each question.",
+      "editor": "checkbox",
+      "default": true
+    }
+  },
+  "required": []
+}
